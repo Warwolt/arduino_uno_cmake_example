@@ -16,9 +16,16 @@ Then, install `avrdude` for use as flasher:
 Make sure that both the avr toolchain `bin` directory and `avrdude` are added to
 your `PATH` environment variable.
 
+Additionally, set the `AVR_FIND_ROOT_PATH` environment variable to the `avr`
+directory of the avr toolchain install.
+
+If needed, you should also install Make. On Winows, https://www.mingw-w64.org/ is recommended.
+
 ## Generate project
 
 ```
 mkdir build
 cmake . -B build -G "Unix Makefiles" -DCMAKE_TOOLCHAIN_FILE=./external/cmake-avr/generic-gcc-avr.cmake
 ```
+
+Note: on Windows this may need to be `-G "MinGW Makefiles"`
