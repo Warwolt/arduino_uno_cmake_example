@@ -1,5 +1,7 @@
 # Arduino Uno C Progamming Hello World
 
+![Arduiono UNO with a LED blinking once a second](blinking_led.gif)
+
 This repository contains a minimal example of building and flashing a Hello
 World program on the Arduino Uno (Atmega329p).
 
