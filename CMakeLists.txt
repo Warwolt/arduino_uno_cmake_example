@@ -1,14 +1,27 @@
 cmake_minimum_required(VERSION 3.24)
 set(AVR_UPLOADTOOL avrdude)
 set(AVR_PROGRAMMER arduino)
-set(AVR_UPLOADTOOL_PORT usb)
+option(AVR_UPLOADTOOL_PORT "USB port that device is connected to")
 set(AVR_MCU atmega328p)
 set(MCU_SPEED 16000000UL)
 project(HelloArduinoUno)
 enable_language(C)
 
+# AVR_UPLOADTOOL_PORT is required but not defined.  Please define it using
+# -DAVR_UPLOADTOOL_PORT=<usb port>, where <usb port> is the port your device
+# is connected to.
+
 # ------------------------- Cross-compilation setup -------------------------- #
 if(AVR)
+    if (AVR_UPLOADTOOL_PORT MATCHES "OFF")
+        message(FATAL_ERROR
+            "AVR_UPLOADTOOL_PORT is required but not defined. "
+            "Please define it using -DAVR_UPLOADTOOL_PORT=<usb port>, "
+            "where <usb port> is the port your device is connected to: "
+            "e.g. com5 (windows), /dev/ttyUSB0 (linux)"
+        )
+    endif()
+
     if(DEFINED ENV{AVR_FIND_ROOT_PATH})
         set(CMAKE_FIND_ROOT_PATH $ENV{AVR_FIND_ROOT_PATH})
     else(DEFINED ENV{AVR_FIND_ROOT_PATH})
