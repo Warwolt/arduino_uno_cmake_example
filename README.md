@@ -1,4 +1,4 @@
-# Arduino Uno C Progamming Hello World
+# Arduino Uno + CMake "Hello World" Program
 
 ![Arduiono UNO with a LED blinking once a second](blinking_led.gif)
 
