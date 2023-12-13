@@ -68,3 +68,4 @@ endif(AVR)
 add_avr_executable(${PROJECT_NAME}
    src/main.c
 )
+add_definitions("-DF_CPU=${MCU_SPEED}")
