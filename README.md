@@ -7,7 +7,7 @@ World program on the Arduino Uno (Atmega329p).
 
 ## Install AVR Toolchain
 
-Install `AVR 8-Bit Toolchain` for your platform:
+First, install `AVR 8-Bit Toolchain` for your platform:
 
 - https://www.microchip.com/en-us/tools-resources/develop/microchip-studio/gcc-compilers
 
@@ -21,7 +21,7 @@ your `PATH` environment variable.
 Additionally, set the `AVR_FIND_ROOT_PATH` environment variable to the `avr`
 directory of the avr toolchain install.
 
-If needed, you should also install Make. On Winows, https://www.mingw-w64.org/ is recommended.
+If needed, you should also install Make. On Windows, https://www.mingw-w64.org/ is recommended.
 
 ## Connect device and identify USB port
 
