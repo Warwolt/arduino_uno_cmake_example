@@ -7,10 +7,6 @@ set(MCU_SPEED 16000000UL)
 project(HelloArduinoUno)
 enable_language(C)
 
-# AVR_UPLOADTOOL_PORT is required but not defined.  Please define it using
-# -DAVR_UPLOADTOOL_PORT=<usb port>, where <usb port> is the port your device
-# is connected to.
-
 # ------------------------- Cross-compilation setup -------------------------- #
 if(AVR)
     if (AVR_UPLOADTOOL_PORT MATCHES "OFF")
