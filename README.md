@@ -1,4 +1,4 @@
-# Arduino Uno + CMake "Hello World" Program
+# Arduino Uno + CMake Example
 
 ![Arduiono UNO with a LED blinking once a second](blinking_led.gif)
 
