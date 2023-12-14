@@ -5,6 +5,8 @@
 This repository contains a minimal example of building and flashing a Hello
 World program on the Arduino Uno (Atmega329p).
 
+It utilizes [cmake-avr](https://github.com/mkleemann/cmake-avr/) as CMake cross-compilation toolchain.
+
 ## Install AVR Toolchain
 
 First, install `AVR 8-Bit Toolchain` for your platform:
